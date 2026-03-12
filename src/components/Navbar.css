@@ -1,0 +1,197 @@
+/* ── NAVBAR PRINCIPAL ── */
+.navbar {
+  width: 100%;
+  padding: 8px 40px 0px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Estado ativo quando dropdown está aberto */
+.navbar--ativo {
+  background-color: var(--color-surface);
+}
+
+/* Efeitos de hover na navbar */
+.navbar:hover .navbar__inner {
+  border-radius: var(--radius-full);
+  box-shadow: none;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.navbar:hover .navbar__logo-svg {
+  color: var(--color-text);
+}
+
+.navbar:hover .navbar__item a,
+.navbar:hover .navbar__item-titulo { 
+  color: var(--color-text);
+}
+
+.navbar:hover .btn--outline {
+  font-family: var(--font-family-heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: var(--font-md);
+  font-weight: 600;
+  white-space: nowrap;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.35);
+  background-color: var(--color-button-primary);
+  color: white;
+}
+
+/* ── CONTAINER INTERNO ── */
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 8px 8px 12px;
+  border-radius: var(--radius-full);
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+/* ── LOGO ── */
+.navbar__logo-svg {
+  height: 40px;
+  width: auto;
+  color: var(--color-primary);
+}
+
+.navbar__logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-lg);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* ── NAVEGAÇÃO PRINCIPAL ── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__item {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo dos links de navegação */
+.navbar__item a,
+.navbar__item-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--color-text-secondary_onDark);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: var(--font-family-heading);
+  transition: all 0.2s ease;
+}
+
+/* ── DROPDOWN ── */
+.navbar__item--dropdown {
+  position: relative;
+}
+
+/* Container principal do dropdown */
+.dropdown {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: 
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 508px;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Dropdown visível quando hover */
+.navbar__item--dropdown:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Container centralizado do conteúdo do dropdown */
+.dropdown__inner {
+  display: flex;
+  width: 1280px;
+  flex-direction: row;
+  gap: var(--space-xl);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-xl);
+}
+
+/* ── COLUNAS DO DROPDOWN ── */
+.dropdown__coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  align-self: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family-heading);
+}
+
+/* Container dos itens de cada coluna */
+.dropdown__coluna-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Títulos das colunas */
+.dropdown__coluna-titulo {
+  font-family: var(--font-family-body);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary_onDark);
+  margin-bottom: 8px;
+}
+
+/* Itens das colunas */
+.dropdown__coluna li {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 8px 0px;
+  transition: color 0.2s ease;
+}

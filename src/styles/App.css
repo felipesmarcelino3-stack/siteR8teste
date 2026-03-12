@@ -1,0 +1,48 @@
+/* Estilos globais da aplicação */
+.app {
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+/* Container principal */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Seções */
+.section {
+  padding: var(--space-2xl) 0;
+}
+
+/* Grid layouts */
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 0 var(--space-md);
+  }
+}

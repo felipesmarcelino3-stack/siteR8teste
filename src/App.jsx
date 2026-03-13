@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import "./styles/App.css"
 import Home from "./pages/Home"
 import Sobre from "./pages/Sobre"
@@ -8,14 +8,14 @@ import "./components/Navbar.css"
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/projetos" element={<Projetos />} />
       </Routes>
-    </BrowserRouter>
+    </>
   )
 }
 

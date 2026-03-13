@@ -1,8 +1,10 @@
+import NossoDiferencial from "../components/NossoDiferencial"
+
 function Home() {
   return (
-    <div>
-      
-    </div>
+    <main>
+      <NossoDiferencial />
+    </main>
   )
 }
 

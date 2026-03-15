@@ -8,6 +8,7 @@
   z-index: 100;
   background-color: transparent;
   transition: background-color 0.3s ease;
+  backdrop-filter: blur(20px);
 }
 
 /* Estado ativo quando dropdown está aberto */

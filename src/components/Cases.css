@@ -1,0 +1,113 @@
+.cases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 40px 0;
+  background: #0D0D0B;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cases__container {
+  width: 100%;
+  max-width: 1440px;
+}
+
+/* Header */
+
+.cases__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.cases__header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 637px;
+}
+
+.cases__eyebrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.cases__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.cases__eyebrow-text {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-normal);
+  font-size: 13px;
+  line-height: 160%;
+  color: #EDECE6;
+}
+
+.cases__title {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-semibold);
+  font-size: 47px;
+  line-height: 130%;
+  color: #EDECE6;
+  margin: 0;
+}
+
+.cases__header-right {
+  display: flex;
+  align-items: flex-end;
+  max-width: 460px;
+  padding-left: 80px;
+}
+
+.cases__subtitle {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-normal);
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: -0.02em;
+  color: var(--color-text-secondary_onDark);
+  margin: 0;
+}
+
+/* Scroll de cards */
+
+.cases__scroll-wrapper {
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: visible;
+  padding-bottom: 120px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.cases__scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.cases__cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  padding-left: max(40px, calc((100vw - 1440px) / 2));
+  width: max-content;
+}
+
+.cases__scroll-wrapper {
+  cursor: grab;
+}
+
+.cases__scroll-wrapper--dragging {
+  cursor: grabbing;
+}

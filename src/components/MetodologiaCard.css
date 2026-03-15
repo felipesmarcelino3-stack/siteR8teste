@@ -1,0 +1,124 @@
+.metodologia-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  flex-shrink: 0;
+  width: calc((100% - 27.77% - 40px) / 5);
+  height: 313px;
+  background: #1F1F1D;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: background 0.3s ease, border 0.3s ease;
+  overflow: hidden;
+  transition: width 0.2s ease-in-out,
+              background 0.3s ease-in-out,
+              border-color 0.3s ease-in-out;
+  
+}
+
+.metodologia-card:hover {
+  background: #272725;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.metodologia-card--ativo {
+  width: 27.77%;
+  background: #292928;
+  border-color: rgba(255, 255, 255, 0.4);
+  cursor: default;
+}
+
+.metodologia-card--ativo:hover {
+  background: #292928;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Número */
+
+.metodologia-card__numero {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-normal);
+  font-size: 13px;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
+}
+
+.metodologia-card--ativo .metodologia-card__numero {
+  color: #ffffff;
+}
+
+/* Título */
+
+.metodologia-card__titulo {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-semibold);
+  font-size: 18px;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 8px;
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+
+.metodologia-card--ativo .metodologia-card__titulo {
+  font-size: 27px;
+  font-weight: var(--font-weight-bold);
+  line-height: 140%;
+  color: #ffffff;
+}
+
+/* Descrição */
+
+.metodologia-card__descricao {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-md);
+  line-height: 160%;
+  letter-spacing: -0.02em;
+  color: var(--color-text-secondary_onDark);
+  margin: 0;
+  padding-bottom: 24px;
+  opacity: 0;
+  animation: fadeIn 0.2s ease-in-out 0.2s forwards;
+}
+
+/* Radio button */
+
+.metodologia-card__radio {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metodologia-card__radio-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.metodologia-card--ativo .metodologia-card__radio {
+  border-color: #EBD400;
+}
+
+.metodologia-card--ativo .metodologia-card__radio-inner {
+  background: #FFE700;
+  box-shadow: 0px 0px 2px #FFE700;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

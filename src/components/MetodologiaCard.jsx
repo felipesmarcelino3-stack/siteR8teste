@@ -9,7 +9,7 @@ const MetodologiaCard = ({ numero, titulo, descricao, ativo, onClick }) => {
     >
 
       <span className="metodologia-card__numero">{numero}</span>
-      <h3 className="metodologia-card__titulo" key={ativo ? "ativo" : "inativo"}>{titulo}</h3>
+      <h3 className="metodologia-card__titulo">{titulo}</h3>
 
       {ativo && (
         <p className="metodologia-card__descricao">{descricao}</p>
